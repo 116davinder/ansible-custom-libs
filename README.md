@@ -244,6 +244,8 @@ Name | Description
 [community.missing_collection.aws_worklink_info](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.aws_worklink_info_module.rst)|Get Information about Amazon WorkLink.
 [community.missing_collection.aws_workmail_info](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.aws_workmail_info_module.rst)|Get Information about Amazon WorkMail.
 [community.missing_collection.mapr_service](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.mapr_service_module.rst)|Manage MapR Services by rest api.
+[community.missing_collection.minio_bucket](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.minio_bucket_module.rst)|Create/Update/Delete Minio Buckets.
+[community.missing_collection.minio_bucket_info](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.minio_bucket_info_module.rst)|Get Information about Minio Bucket.
 [community.missing_collection.newrelic_deployment](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.newrelic_deployment_module.rst)|Notify newrelic about app deployments via v2 api.
 [community.missing_collection.zookeeper_info](https://github.com/116davinder/ansible.missing_collection/blob/master/docs/community.missing_collection.zookeeper_info_module.rst)|Get Information about Zookeeper Instance.
 

@@ -1,0 +1,76 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+  ignore_errors: true
+  tasks:
+    - name: get list of sort buckets
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        list_buckets: true
+
+    - name: get version status of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_versioning: true
+        bucket: 'test'
+
+    - name: get replication status of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_replication: true
+        bucket: 'test'
+
+    - name: get lifecycle rules & their status of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_lifecycle: true
+        bucket: 'test'
+
+    - name: get tags of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_tags: true
+        bucket: 'test'
+
+    - name: get policy of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_policy: true
+        bucket: 'test'
+
+    - name: get notification details of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_notification: true
+        bucket: 'test'
+
+    - name: get encryption details of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_bucket_encryption: true
+        bucket: 'test'
+
+    - name: get encryption details of given bucket
+      minio_bucket_info:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        get_object_lock_config: true
+        bucket: 'test'

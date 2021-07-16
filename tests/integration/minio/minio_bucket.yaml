@@ -1,0 +1,32 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+  ignore_errors: true
+  tasks:
+    - name: create bucket in minio
+      minio_bucket:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        make_bucket: true
+        bucket: "test12"
+        object_lock: false
+
+    - name: remove given bucket
+      minio_bucket:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        remove_bucket: true
+        bucket: 'test5'
+
+    - name: set bucket tags
+      minio_bucket:
+        endpoint: "localhost:9000"
+        username: minioadmin
+        password: minioadmin
+        set_bucket_tags: true
+        bucket: 'test12'
+        tags:
+          project: "ansible"
